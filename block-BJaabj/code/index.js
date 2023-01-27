@@ -15,7 +15,12 @@ function sayHello() {
   - Alert `fullName`
 */
 
-
+function fullName() {
+ let firstName = prompt(`Enter your first name`);
+ let lastName = prompt(`Enter your last name`);
+ let fullName = firstName + "" + lastName;
+ alert(`${fullName}`);
+}
 
 /*
 3. Create a function named `addTwoNumbers` with the following steps:
@@ -25,6 +30,13 @@ function sayHello() {
   - Add the value of firstNum and secondNum and store it in another variable named `sum`.
   - Alert `sum`
 */
+
+function addTwoNumbers() {
+  let firstNum = prompt(`Enter the first number`);
+  let secondNum = prompt(`Enter the second number`);
+  let sum = firstNum + secondNum;
+  alert(`${sum}`)
+}
 
 /*
 4. Create a function named `getTable` with the following steps:
@@ -59,3 +71,6 @@ function sayHello() {
   - Alert `The factorial of [number] is [factorial]`
 
 */
+
+
+// test execution
