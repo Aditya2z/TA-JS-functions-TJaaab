@@ -32,8 +32,8 @@ function fullName() {
 */
 
 function addTwoNumbers() {
-  let firstNum = prompt(`Enter the first number`);
-  let secondNum = prompt(`Enter the second number`);
+  let firstNum = +prompt(`Enter the first number`);
+  let secondNum = +prompt(`Enter the second number`);
   let sum = firstNum + secondNum;
   alert(`${sum}`)
 }
@@ -57,12 +57,33 @@ function addTwoNumbers() {
   9 * 10 = 90
 */
 
+function getTable() {
+  let num = +prompt(`Enter a number`);
+  let counter = 1;
+
+    while(counter <= 10) {
+      console.log(`${num * counter}`)
+      counter++;
+    }
+}
+
 /*
 5. Create a function named `isLeapYear` with the following steps:
 
   - Prompts a message saying `Enter a year` and store the value into variable named`year`
   - Alert `[year] is a leap year` otherwise `[year] is not a leap year`
 */
+
+function isLeapYear() {
+  let year = +prompt(`Enter a year`);
+
+    if( (year % 4 !== 0) || (year % 400 !== 0  && year % 100 === 0) ) {
+      alert(`${year} is not a leap year`);
+    } else {
+      alert(`${year} is a leap year`);
+    }
+}
+
 
 /*
 6. Create a function named `getFactorial` with the following steps:
@@ -73,4 +94,4 @@ function addTwoNumbers() {
 */
 
 
-// test execution
+
