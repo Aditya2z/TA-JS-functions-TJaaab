@@ -11,10 +11,13 @@ minToSec(2) ➞ 120
 */
 
 // - Write a Function Decleration for above problem
-function minToSec() {
+function minToSec(min) {
   // Your code
+  let seconds = min * 60;
+  return seconds;
 }
 // - Execute the function with required parameter
+minToSec(10);
 
 /* 2. 
 Create a function named isInRange which validates whether a number n is exclusively within the bounds of lower and upper.
@@ -26,10 +29,17 @@ isInRange(1, 10, 19); // false
 */
 
 // - Write a Function Decleration for above problem
-function isInRange() {
+function isInRange(lower, upper, number) {
   // Your code
+  if(number < upper && number > lower) {
+    return true;
+  } else {
+    return false;
+  }
 }
 // - Execute the function with required parameter
+isInRange(1, 20, 9); 
+isInRange(1, 10, 19);
 
 /* 2. calculateBMI
 
@@ -49,8 +59,20 @@ Obese: BMI is 30 or more
 
 */
 
-function calculateBMI() {
+function calculateBMI(weight, height) {
   // Your code
+  let bmi = weight / (height * height);
+  
+    switch(true) {
+      case bmi < 18.5:
+        return `Underweight`;
+      case bmi < 24.9:
+        return `Normal weight`;
+      case bmi < 29.9:
+        return `Overweight`;
+      case bmi > 30:
+        return `Obese`;
+    }
 }
 
 /* 3. appropiateDrinks
@@ -64,8 +86,18 @@ Create a function that take the age are return the appropiate drink based on the
 
 */
 
-function appropiateDrinks() {
+function appropiateDrinks(age) {
   // Your code
+  switch(true) {
+    case age < 14:
+      return "drink fruit juice";
+    case age < 18:
+      return "drink soda";
+    case age < 21:
+      return "drink fruit-flavored beer";
+    case age >= 21:
+      return "drink throat-piercing vodka";
+  }
 }
 
 /* 4. Add two numers or string
@@ -79,8 +111,14 @@ Twist is when user passes anything other than number, or string value you should
 
 */
 
-function sum() {
+function sum(x, y) {
   // Your code
+  if( (typeof x === `number` && typeof y === `number`) ||
+      (typeof x === `string` && typeof y === `string`) ) {
+        return x + "" + y;
+    } else {
+      alert ("Enter valid values");
+    }
 }
 
 // Function Test
